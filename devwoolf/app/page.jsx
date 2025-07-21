@@ -7,12 +7,15 @@ import { FaArrowRight } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { Typewriter } from "react-simple-typewriter";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500"],
+});
 
 export default function Home() {
   return (
     <div
-      className={` relative w-full h-screen overflow-hidden ${inter.className}`}
+      className={`font-thin relative w-full h-screen overflow-hidden ${inter.className}`}
     >
       <Nav />
 
