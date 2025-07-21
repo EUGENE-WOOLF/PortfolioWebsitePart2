@@ -17,7 +17,7 @@ export default function Nav() {
           <div>
             <a href="/">
               <Image
-                className="relative border right-5 "
+                className="relative  right-5 "
                 src={logo}
                 alt="Logo"
                 width={120}
@@ -38,20 +38,20 @@ export default function Nav() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            className="fixed border-amber-950 inset-0 z-50 bg-black flex flex-col items-center justify-center transition-all duration-300"
+            className="fixed  inset-0 z-50 bg-black flex flex-col items-center justify-center transition-all duration-300"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <button
-              className="absolute top-2 border border-amber-500 absolute top-4 right-4 md:absolute md:top-8"
+              className="absolute top-2  absolute top-4 right-4 md:absolute md:top-8"
               onClick={() => setMenuOpen(false)}
             >
               <X className=" w-6 h-6" />
             </button>
 
             <nav className="flex flex-col gap-6 text-xl font-medium">
-              <a href="#home" onClick={() => setMenuOpen(false)}>
+              <a href="/home" onClick={() => setMenuOpen(false)}>
                 Home
               </a>
               <a href="#about" onClick={() => setMenuOpen(false)}>

@@ -1,20 +1,23 @@
 "use client";
+
 import Nav from "@/components/navbar";
 import { Inter } from "next/font/google";
+import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
+import { Button } from "@/components/ui/button";
 import { Typewriter } from "react-simple-typewriter";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter", // important if using variable
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <div
-      className={`relative w-full h-screen overflow-hidden ${inter.variable}`}
+      className={` relative w-full h-screen overflow-hidden ${inter.className}`}
     >
       <Nav />
+
       {/* Background video */}
+
       <video
         autoPlay
         loop
@@ -27,15 +30,17 @@ export default function Home() {
       </video>
 
       {/* Foreground content */}
-      <div className="h-full">
-        <div className=" md:h-[60vh] h-full  md:items-start relative z-10 flex flex-col  justify-center  text-white text-center px-6">
-          <div className="md:ml-15">
-            <h1 className="text-5xl font-bold mb-4">
+
+      <div className="h-full ">
+        <div className=" md:h-[60vh]  h-full md:items-start relative z-10 flex flex-col justify-center text-white text-center px-6">
+          <div className="md:ml-15  md:flex flex-col ">
+            <h1 className="text-6xl md:text-7.5xl font-bold mb-4">
               Hi, I'm <p className="inline text-[#799EFF]">Ujjwal</p>
             </h1>
-            <div>
+
+            <div className="md:text-3xl text-xl font-semibold mb-6 ">
               Freelance Developer. Full-time Builder.{" "}
-              <div className="ld:inline text-2xl    text-[#799EFF]">
+              <div className="ld:inline text-2xl md:text-3xl text-[#799EFF]">
                 <Typewriter
                   words={["Eat", "Sleep", "Code", "Repeat!"]}
                   loop={0}
@@ -46,6 +51,17 @@ export default function Home() {
                   delaySpeed={1500}
                 />
               </div>
+            </div>
+
+            <div className="md:self-center md:w-[20vw]">
+              <Button
+                asChild
+                className="flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#6A93FF] to-[#4762FF] text-white font-medium text-lg shadow-md hover:brightness-110 hover:scale-105 transition duration-200"
+              >
+                <Link href="/logi">
+                  Hire Me <FaArrowRight />
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
