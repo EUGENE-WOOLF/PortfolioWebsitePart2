@@ -46,6 +46,10 @@
 body {
   color: var(--color-foreground);
 }
+/* 
+html {
+  scroll-behavior: smooth;
+} */
 
 :root {
   --radius: 0.625rem;

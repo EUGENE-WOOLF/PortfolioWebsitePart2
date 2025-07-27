@@ -1,7 +1,16 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "$/lib/*": ["./lib/*"], // This alias uses "$/lib/"
+      "$/components/*": ["./components/*"] // This alias uses "$/components/"
     }
-  }
+  },
+  "include": [
+    "components/**/*",
+    "lib/**/*",
+    "pages/**/*",
+    "app/**/*" // IMPORTANT: Keep this line if you are using Next.js App Router
+  ],
+  "exclude": ["node_modules"]
 }

@@ -13,26 +13,28 @@ export default function Nav() {
   return (
     <>
       {/* Top navbar */}
-      <nav className="flex items-center justify-between px-4 py-3 md:px-8 md:py-5">
+      <nav className="flex  items-center justify-between px-4 py-3 md:px-8 md:py-1">
         {/* Logo */}
         <Link href="/">
           <Image src={logo} alt="Logo" width={120} height={24} />
         </Link>
 
         {/* Desktop links */}
-        <div className="hidden md:flex space-x-8 relative right-5 text-white font-light">
-          <Link href="/" className="hover:text-[#799EFF] transition">
-            Home
-          </Link>
-          <Link href="/projects" className="hover:text-[#799EFF] transition">
-            Projects
-          </Link>
-          <Link href="/experience" className="hover:text-[#799EFF] transition">
-            Experience
-          </Link>
-          <Link href="/contact" className="hover:text-[#799EFF] transition">
-            Contact
-          </Link>
+        <div className="hidden md:flex space-x-8 relative right-5 text-white font-medium">
+          {[
+            { href: "/", label: "Home." },
+            { href: "/projects", label: "Projects." },
+            { href: "/experience", label: "Experience." },
+            { href: "/contact", label: "Contact." },
+          ].map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className="relative after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-full after:scale-x-0 after:bg-[#799EFF] after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100 hover:text-[#799EFF] transition"
+            >
+              {label}
+            </Link>
+          ))}
         </div>
 
         {/* Mobile hamburger */}

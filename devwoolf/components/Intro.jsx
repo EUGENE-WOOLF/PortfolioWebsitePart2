@@ -1,21 +1,25 @@
 "use client";
 
-import Nav from "@/components/navbar";
+import Nav from "./navbar";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
-import { Button } from "@/components/ui/button";
+import { Button } from "$/components/ui/button";
+
 import { Typewriter } from "react-simple-typewriter";
 
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["100", "300", "400", "500"],
-});
+import { Space_Grotesk } from "next/font/google";
 
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-space-grotesk",
+  display: "swap",
+});
 export default function HomePage() {
   return (
     <div
-      className={`font-thin relative w-full h-screen overflow-hidden ${inter.className}`}
+      className={`font-thin relative w-full h-screen overflow-hidden ${spaceGrotesk.className}`}
     >
       <Nav />
 
