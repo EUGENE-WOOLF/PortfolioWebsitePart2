@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${spaceGrotesk.variable} font-sans antialiased`}>
+      <body className={`${spaceGrotesk.variable} antialiased`}>
         <main>{children}</main>
       </body>
     </html>

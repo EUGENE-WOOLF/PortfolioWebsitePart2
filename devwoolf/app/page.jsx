@@ -31,7 +31,6 @@ export default function Home() {
         }}
       />
 
-      {/* Scrollable content */}
       <HomePage />
       <Experience />
     </ReactLenis>
