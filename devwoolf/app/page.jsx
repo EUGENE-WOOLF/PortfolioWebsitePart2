@@ -11,7 +11,6 @@ export default function Home() {
   // optional: this just logs the lenis object each scroll tick
   useLenis((lenis) => {
     // You can hook into scroll here
-    console.log(lenis.scroll);
   });
 
   return (
