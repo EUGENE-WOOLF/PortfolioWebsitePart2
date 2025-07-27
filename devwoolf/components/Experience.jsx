@@ -16,11 +16,11 @@ export default function Experience() {
       style={{ fontFamily: "var(--font-inter)" }}
     >
       <ScrollFadeInOut>
-        <div className=" h-screen flex flex-col md:flex-row flex-wrap-reverses md:flex-nowrap">
-          <div className="flex flex-col justify-around md:w-[40vw] px-4 md:px-10 py-4 md:m-6 my-4 gap-6">
+        <div className=" h-screen flex flex-col-reverse justify-around md:flex-row flex-wrap-reverses md:flex-nowrap">
+          <div className=" flex flex-col justify-around md:w-[40vw] px-4 md:px-10 py-4 md:m-6 my-4 gap-6">
             {/* //there has been a margin added please do think about that //check here */}
-            <div className="tracking-wide">
-              <div className="flex flex-col border-white">
+            <div className="  tracking-wide">
+              <div className=" flex flex-col ">
                 {/* Name */}
                 <div className="text-[#C6D1EC] text-5xl font-bold">
                   Ujjwal Prakash
@@ -63,7 +63,7 @@ export default function Experience() {
               </div>
             </div>
             <div>
-              <div className="flex justify-center gap-6">
+              <div className=" flex justify-center gap-6">
                 <a
                   href="https://www.linkedin.com/in/ujjwal-prakash-036873336/"
                   className="hover:text-blue-400 transition"
@@ -85,7 +85,7 @@ export default function Experience() {
               </div>
             </div>
           </div>
-          <StyledArtCards />
+          <StyledArtCards className="" />
         </div>
       </ScrollFadeInOut>
     </div>
