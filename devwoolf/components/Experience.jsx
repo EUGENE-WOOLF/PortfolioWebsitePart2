@@ -16,9 +16,13 @@ export default function Experience() {
       style={{ fontFamily: "var(--font-inter)" }}
     >
       <ScrollFadeInOut>
-        <div className=" h-screen flex flex-col-reverse justify-around md:flex-row flex-wrap-reverses md:flex-nowrap">
-          <div className=" flex flex-col justify-around md:w-[40vw] px-4 md:px-10 py-4 md:m-6 my-4 gap-6">
-            {/* //there has been a margin added please do think about that //check here */}
+        {/* Changed: For mobile, it's flex-col and justify-center to reduce space.
+            For md screens, it reverts to flex-row and justify-around. */}
+        <div className=" h-screen flex flex-col justify-center md:flex-row md:justify-around md:flex-nowrap">
+          {/* Changed: Added mt-8 for mobile to create a small gap from the top,
+                      but removed other vertical margins that were causing excessive space on mobile.
+                      md:m-6 is kept for larger screens. */}
+          <div className=" flex flex-col justify-around md:w-[40vw] px-4 md:px-10 py-4 mt-8 md:m-6 gap-6">
             <div className="  tracking-wide">
               <div className=" flex flex-col ">
                 {/* Name */}

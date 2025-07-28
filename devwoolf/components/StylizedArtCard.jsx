@@ -24,8 +24,8 @@ export default function StyledArtCard() {
           object-cover
         "
       />
-      <div className="text-center text-2xl my-5">
-        Let’s build the thing they said you couldn’t
+      <div className="text-center text-2xl my-5 font-semibold">
+        From the edge of crazy to the center of real.
       </div>
     </div>
   );
