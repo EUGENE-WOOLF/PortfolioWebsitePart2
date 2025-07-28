@@ -16,6 +16,7 @@ export default function StyledArtCard() {
         loop
         muted
         playsInline
+        preload="none"
         className="
           rounded-xl
 

@@ -12,12 +12,13 @@ export default function ScrollFadeInOut({ children, delay = 0 }) {
     <motion.div
       ref={ref}
       initial={{ opacity: 0 }}
-      animate={{ opacity: inView ? 1 : 0 }}
+      animate={{ opacity: inView ? 1 : 0.2 }} // Start closer to visible
       transition={{
         duration: 0.8,
-        ease: [0.25, 0.1, 0.25, 1], // ease-in-out
+        ease: [0.25, 0.1, 0.25, 1],
         delay,
       }}
+      className="text-gray-300" // Use a lighter shade that blends well
     >
       {children}
     </motion.div>
