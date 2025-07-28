@@ -2,6 +2,7 @@
 
 import HomePage from "../components/Intro";
 import Experience from "../components/Experience";
+import Project from "$/components/Projects";
 import { motion, useScroll } from "framer-motion";
 import { ReactLenis, useLenis } from "lenis/react";
 
@@ -32,6 +33,7 @@ export default function Home() {
 
       <HomePage />
       <Experience />
+      <Project />
     </ReactLenis>
   );
 }

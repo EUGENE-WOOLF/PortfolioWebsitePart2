@@ -11,11 +11,11 @@ const inter = Inter({
 
 export default function Experience() {
   return (
-    <div
-      className={`${inter.variable} antialiased h-screen text-gray-400	 bg-gradient-to-br from-[#0a0f1a] via-[#1a2338] to-[#121826]`}
-      style={{ fontFamily: "var(--font-inter)" }}
-    >
-      <ScrollFadeInOut>
+    <ScrollFadeInOut>
+      <div
+        className={`${inter.variable} antialiased h-screen text-gray-400	 bg-gradient-to-br from-[#0a0f1a] via-[#1a2338] to-[#121826]`}
+        style={{ fontFamily: "var(--font-inter)" }}
+      >
         {/* Changed: For mobile, it's flex-col and justify-center to reduce space.
             For md screens, it reverts to flex-row and justify-around. */}
         <div className=" h-screen flex flex-col justify-center md:flex-row md:justify-around md:flex-nowrap">
@@ -91,7 +91,7 @@ export default function Experience() {
           </div>
           <StyledArtCards className="" />
         </div>
-      </ScrollFadeInOut>
-    </div>
+      </div>
+    </ScrollFadeInOut>
   );
 }
